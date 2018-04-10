@@ -230,7 +230,7 @@ kable(Mprime, caption="M prime")
 To make M properly represent probabilities, normalize $M'$ so that for each position in the motif (column), the sum of the probabilities of each nucleotide is equal to one. Do this by dividing each entry in $M'$ by the sum of that column.
 
 ```{r eval=FALSE}
-M = Mprime/rowSums(Mprime)
+M = Mprime/colSums(Mprime)
 kable(M, caption = 'M')
 ```
 
